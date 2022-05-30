@@ -8,8 +8,8 @@
 import Foundation
 
 struct DataWeatherResp: Decodable {
-    //var lat: Double?
-    //var lon: Double?
+    var lat: Double?
+    var lon: Double?
     var timezone: String?
     var current: CurrentWeather?
 }
