@@ -6,3 +6,21 @@
 //
 
 import Foundation
+import UIKit
+
+@IBDesignable
+class UILabelBarlowMedium: UILabel {
+    
+    override func prepareForInterfaceBuilder() {
+        setUILabel()
+    }
+    
+    override func awakeFromNib() {
+        setUILabel()
+    }
+    
+    private func setUILabel() {
+        font = UIFont.font(size: font.pointSize, fontType: .barlowMedium)
+    }
+
+}

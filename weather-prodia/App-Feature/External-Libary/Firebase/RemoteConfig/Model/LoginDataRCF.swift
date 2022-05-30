@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct LoginDataRCF: Decodable {
+    var user : String?
+    var password : String?
+}

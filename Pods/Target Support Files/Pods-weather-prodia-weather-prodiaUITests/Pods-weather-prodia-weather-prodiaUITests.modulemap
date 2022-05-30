@@ -1,0 +1,6 @@
+framework module Pods_weather_prodia_weather_prodiaUITests {
+  umbrella header "Pods-weather-prodia-weather-prodiaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,28 +1,268 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main HomeVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainHomeVCIdentifier" id="Y6W-OH-hqX" customClass="MainHomeVC" customModule="weather_prodia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2P-cV-vX1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_weather" translatesAutoresizingMaskIntoConstraints="NO" id="Jpi-Me-SGu">
+                                        <rect key="frame" x="8" y="8" width="398" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="ZAG-42-ksU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_home_poweredby" translatesAutoresizingMaskIntoConstraints="NO" id="rTi-Hv-bMa">
+                                        <rect key="frame" x="148.5" y="774" width="117" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="117" id="1cR-HQ-TS3"/>
+                                            <constraint firstAttribute="height" constant="44" id="cDx-FJ-DCR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxk-uv-eZh">
+                                        <rect key="frame" x="8" y="116" width="398" height="650"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKe-hU-KOl" customClass="UILabelBarlowSemiBold" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="24" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="EST-2A-znc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKa-rt-Pc2" customClass="UILabelBarlowRegular" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="49" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="giz-Hg-cgx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ac-sx-ehw" customClass="UILabelBarlowSemiBold" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="86" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="kzW-gV-uG8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNC-C1-hWk" customClass="UILabelBarlowRegular" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="111" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="gcx-ii-nIw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timezone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OY-Kl-W5k" customClass="UILabelBarlowSemiBold" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="148" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="Qvi-MA-Khi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bK-2G-LFe" customClass="UILabelBarlowRegular" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="173" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="86A-bV-RPO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DA1-Ri-77N" customClass="UILabelBarlowSemiBold" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="210" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="d6d-pm-xOC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5k-5k-dil" customClass="UILabelBarlowRegular" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="235" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="6iN-lS-fnv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGw-Yq-mH1" customClass="UILabelBarlowSemiBold" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="272" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="0c7-7U-CLW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXM-pN-E4z" customClass="UILabelBarlowRegular" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="297" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="49u-Qf-7pd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="477-AS-wTf" customClass="UILabelBarlowSemiBold" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="334" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="kMI-yd-Ghg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g0-oA-cYW" customClass="UILabelBarlowRegular" customModule="weather_prodia" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="359" width="350" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="7t8-2e-OY9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="PNC-C1-hWk" secondAttribute="trailing" constant="24" id="16K-IS-K12"/>
+                                            <constraint firstItem="aKe-hU-KOl" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="2DO-yV-0pJ"/>
+                                            <constraint firstItem="1bK-2G-LFe" firstAttribute="top" secondItem="2OY-Kl-W5k" secondAttribute="bottom" constant="4" id="5CQ-ro-mPE"/>
+                                            <constraint firstItem="PNC-C1-hWk" firstAttribute="top" secondItem="0Ac-sx-ehw" secondAttribute="bottom" constant="4" id="6gA-76-u7l"/>
+                                            <constraint firstAttribute="trailing" secondItem="aKe-hU-KOl" secondAttribute="trailing" constant="24" id="DYk-vS-zNp"/>
+                                            <constraint firstAttribute="trailing" secondItem="nKa-rt-Pc2" secondAttribute="trailing" constant="24" id="Fh0-2L-Fxx"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Ac-sx-ehw" secondAttribute="trailing" constant="24" id="Jo0-Ak-ZuT"/>
+                                            <constraint firstItem="477-AS-wTf" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="Llg-t5-RJ2"/>
+                                            <constraint firstItem="nKa-rt-Pc2" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="NeZ-Qf-R45"/>
+                                            <constraint firstItem="DA1-Ri-77N" firstAttribute="top" secondItem="1bK-2G-LFe" secondAttribute="bottom" constant="16" id="Ow1-P4-Cup"/>
+                                            <constraint firstAttribute="trailing" secondItem="1bK-2G-LFe" secondAttribute="trailing" constant="24" id="Qxc-QO-Dz5"/>
+                                            <constraint firstItem="9g0-oA-cYW" firstAttribute="top" secondItem="477-AS-wTf" secondAttribute="bottom" constant="4" id="UAy-54-Wqv"/>
+                                            <constraint firstAttribute="trailing" secondItem="2OY-Kl-W5k" secondAttribute="trailing" constant="24" id="VjE-FE-M4F"/>
+                                            <constraint firstAttribute="trailing" secondItem="477-AS-wTf" secondAttribute="trailing" constant="24" id="X5T-SH-JU6"/>
+                                            <constraint firstItem="KXM-pN-E4z" firstAttribute="top" secondItem="fGw-Yq-mH1" secondAttribute="bottom" constant="4" id="Xj8-mE-X0v"/>
+                                            <constraint firstItem="2OY-Kl-W5k" firstAttribute="top" secondItem="PNC-C1-hWk" secondAttribute="bottom" constant="16" id="Y2K-qf-MPS"/>
+                                            <constraint firstItem="2OY-Kl-W5k" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="ZFG-Zm-xEV"/>
+                                            <constraint firstItem="fGw-Yq-mH1" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="Zeg-Qh-66X"/>
+                                            <constraint firstItem="aKe-hU-KOl" firstAttribute="top" secondItem="Cxk-uv-eZh" secondAttribute="top" constant="24" id="eiM-IY-JvW"/>
+                                            <constraint firstAttribute="trailing" secondItem="KXM-pN-E4z" secondAttribute="trailing" constant="24" id="fre-PN-HiU"/>
+                                            <constraint firstItem="KXM-pN-E4z" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="gVC-8Q-Zpw"/>
+                                            <constraint firstItem="0Ac-sx-ehw" firstAttribute="top" secondItem="nKa-rt-Pc2" secondAttribute="bottom" constant="16" id="h5p-Rd-uYB"/>
+                                            <constraint firstItem="PNC-C1-hWk" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="hU7-8V-oQ6"/>
+                                            <constraint firstItem="477-AS-wTf" firstAttribute="top" secondItem="KXM-pN-E4z" secondAttribute="bottom" constant="16" id="jOM-a6-4Mi"/>
+                                            <constraint firstItem="DA1-Ri-77N" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="lJC-MX-K8Q"/>
+                                            <constraint firstItem="a5k-5k-dil" firstAttribute="top" secondItem="DA1-Ri-77N" secondAttribute="bottom" constant="4" id="lxY-Ee-Cpk"/>
+                                            <constraint firstAttribute="trailing" secondItem="fGw-Yq-mH1" secondAttribute="trailing" constant="24" id="sY9-DS-pqA"/>
+                                            <constraint firstItem="fGw-Yq-mH1" firstAttribute="top" secondItem="a5k-5k-dil" secondAttribute="bottom" constant="16" id="t3x-RJ-JqR"/>
+                                            <constraint firstItem="9g0-oA-cYW" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="tiG-Hh-bW0"/>
+                                            <constraint firstAttribute="trailing" secondItem="9g0-oA-cYW" secondAttribute="trailing" constant="24" id="uZ3-S5-VKj"/>
+                                            <constraint firstAttribute="trailing" secondItem="a5k-5k-dil" secondAttribute="trailing" constant="24" id="uvA-f9-qmZ"/>
+                                            <constraint firstItem="a5k-5k-dil" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="vsB-BN-uva"/>
+                                            <constraint firstItem="1bK-2G-LFe" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="wjC-OV-Ckj"/>
+                                            <constraint firstItem="0Ac-sx-ehw" firstAttribute="leading" secondItem="Cxk-uv-eZh" secondAttribute="leading" constant="24" id="xbJ-O2-INa"/>
+                                            <constraint firstItem="nKa-rt-Pc2" firstAttribute="top" secondItem="aKe-hU-KOl" secondAttribute="bottom" constant="4" id="y9U-8g-STo"/>
+                                            <constraint firstAttribute="trailing" secondItem="DA1-Ri-77N" secondAttribute="trailing" constant="24" id="yJD-Zh-MsA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jpi-Me-SGu" secondAttribute="trailing" constant="8" id="0aP-pB-ttc"/>
+                                    <constraint firstItem="Cxk-uv-eZh" firstAttribute="top" secondItem="Jpi-Me-SGu" secondAttribute="bottom" constant="8" id="4dP-yd-LPt"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cxk-uv-eZh" secondAttribute="trailing" constant="8" id="8cd-BN-cNe"/>
+                                    <constraint firstItem="rTi-Hv-bMa" firstAttribute="top" secondItem="Cxk-uv-eZh" secondAttribute="bottom" constant="8" id="JNl-XO-1oY"/>
+                                    <constraint firstItem="Cxk-uv-eZh" firstAttribute="leading" secondItem="p2P-cV-vX1" secondAttribute="leading" constant="8" id="L3q-Qd-9bz"/>
+                                    <constraint firstItem="Jpi-Me-SGu" firstAttribute="top" secondItem="p2P-cV-vX1" secondAttribute="top" constant="8" id="QxF-s0-psr"/>
+                                    <constraint firstItem="Jpi-Me-SGu" firstAttribute="leading" secondItem="p2P-cV-vX1" secondAttribute="leading" constant="8" id="Uf4-7d-CbX"/>
+                                    <constraint firstItem="rTi-Hv-bMa" firstAttribute="centerX" secondItem="p2P-cV-vX1" secondAttribute="centerX" id="u7V-nM-nFr"/>
+                                    <constraint firstAttribute="bottom" secondItem="rTi-Hv-bMa" secondAttribute="bottom" id="wjw-WB-9PM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="p2P-cV-vX1" secondAttribute="bottom" id="H0V-pQ-S03"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="p2P-cV-vX1" secondAttribute="trailing" id="LKo-yS-ACK"/>
+                            <constraint firstItem="p2P-cV-vX1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dML-ra-an7"/>
+                            <constraint firstItem="p2P-cV-vX1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="qUB-It-khY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblValueHumidity" destination="KXM-pN-E4z" id="rVv-kZ-19Z"/>
+                        <outlet property="lblValueLat" destination="nKa-rt-Pc2" id="yZl-W6-Yns"/>
+                        <outlet property="lblValueLong" destination="PNC-C1-hWk" id="cg8-YI-iDR"/>
+                        <outlet property="lblValuePressure" destination="a5k-5k-dil" id="5EM-XJ-2dc"/>
+                        <outlet property="lblValueTimezone" destination="1bK-2G-LFe" id="lgb-IG-OZt"/>
+                        <outlet property="lblValueWindSpeed" destination="9g0-oA-cYW" id="bAr-9y-Y0e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="37.5"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="0Ac-sx-ehw">
+            <size key="intrinsicContentSize" width="76.5" height="20.5"/>
+        </designable>
+        <designable name="1bK-2G-LFe">
+            <size key="intrinsicContentSize" width="8" height="20.5"/>
+        </designable>
+        <designable name="2OY-Kl-W5k">
+            <size key="intrinsicContentSize" width="74.5" height="20.5"/>
+        </designable>
+        <designable name="477-AS-wTf">
+            <size key="intrinsicContentSize" width="93" height="20.5"/>
+        </designable>
+        <designable name="9g0-oA-cYW">
+            <size key="intrinsicContentSize" width="8" height="20.5"/>
+        </designable>
+        <designable name="DA1-Ri-77N">
+            <size key="intrinsicContentSize" width="67" height="20.5"/>
+        </designable>
+        <designable name="KXM-pN-E4z">
+            <size key="intrinsicContentSize" width="8" height="20.5"/>
+        </designable>
+        <designable name="PNC-C1-hWk">
+            <size key="intrinsicContentSize" width="8" height="20.5"/>
+        </designable>
+        <designable name="a5k-5k-dil">
+            <size key="intrinsicContentSize" width="8" height="20.5"/>
+        </designable>
+        <designable name="aKe-hU-KOl">
+            <size key="intrinsicContentSize" width="62.5" height="20.5"/>
+        </designable>
+        <designable name="fGw-Yq-mH1">
+            <size key="intrinsicContentSize" width="68.5" height="20.5"/>
+        </designable>
+        <designable name="nKa-rt-Pc2">
+            <size key="intrinsicContentSize" width="8" height="20.5"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="img_home_poweredby" width="257" height="102"/>
+        <image name="img_weather" width="170.5" height="170.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

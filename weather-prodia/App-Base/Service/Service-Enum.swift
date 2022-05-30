@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum ResultStatusResp<Value> {
+    case success(Value)
+    case failure(String)
+    case serverBussy
+}

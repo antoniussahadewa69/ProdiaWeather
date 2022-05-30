@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import UIKit
+
+class WeatherRouter {
+    
+    var vc : UIViewController? = nil
+    
+    init(viewController : UIViewController) {
+        self.vc = viewController
+    }
+}
+

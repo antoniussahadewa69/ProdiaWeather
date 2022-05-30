@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import UIKit
+import FirebaseCore
+
+extension AppDelegate {
+    
+    func appFinishLauncFirebaseWithOptions() {
+        //FirebaseApp.configure()
+    }
+}

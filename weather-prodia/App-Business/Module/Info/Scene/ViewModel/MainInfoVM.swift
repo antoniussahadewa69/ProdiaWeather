@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+class MainInfoVM {
+    
+    struct VMProperty {
+        
+    }
+    
+    
+    func setupUserData(){
+        
+    }
+}
+
+extension MainInfoVM {
+    
+}
