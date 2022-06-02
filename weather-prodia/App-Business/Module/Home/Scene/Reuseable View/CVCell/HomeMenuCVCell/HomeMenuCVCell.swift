@@ -37,8 +37,11 @@ class HomeMenuCVCell: UICollectionViewCell {
         static let titleLong : String = "longitude"
         static let titleTimezone : String = "Timezone"
         static let titlePressure : String = "Pressure"
+        static let unitsPressure : String = " bar"
         static let titleHumidity : String = "Humidity"
+        static let unitsHumidity : String = " %"
         static let titleWindSpeed : String = "Wind Speed"
+        static let unitsWindSpeed : String = " km/s"
         
     }
     
@@ -68,13 +71,13 @@ class HomeMenuCVCell: UICollectionViewCell {
             lblDescHomeMenu.text = "\(payload.dataTimezone)"
         } else if payload.isHumidity {
             lblTitleHomeMenu.text = CVProperty.titleHumidity
-            lblDescHomeMenu.text = "\(payload.dataHumidity)"
+            lblDescHomeMenu.text = "\(payload.dataHumidity)" + CVProperty.unitsHumidity
         } else if payload.isPressure {
             lblTitleHomeMenu.text = CVProperty.titlePressure
-            lblDescHomeMenu.text = "\(payload.dataPressure)"
+            lblDescHomeMenu.text = "\(payload.dataPressure)" + CVProperty.unitsPressure
         } else if payload.isWindSpeed {
             lblTitleHomeMenu.text = CVProperty.titleWindSpeed
-            lblDescHomeMenu.text = "\(payload.dataWindSpeed)"
+            lblDescHomeMenu.text = "\(payload.dataWindSpeed)" + CVProperty.unitsWindSpeed
         }
     }
 
