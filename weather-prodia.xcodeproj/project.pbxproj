@@ -70,6 +70,8 @@
 		CEB2CA7528446BB4008956A3 /* HomeResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2CA7428446BB4008956A3 /* HomeResp.swift */; };
 		CEB2CA772844707F008956A3 /* RestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2CA762844707F008956A3 /* RestHelper.swift */; };
 		CEB2CA79284471A3008956A3 /* Service-Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2CA78284471A3008956A3 /* Service-Enum.swift */; };
+		CEB2CA7D2848240F008956A3 /* HomeMenuCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2CA7B2848240F008956A3 /* HomeMenuCVCell.swift */; };
+		CEB2CA7E2848240F008956A3 /* HomeMenuCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB2CA7C2848240F008956A3 /* HomeMenuCVCell.xib */; };
 		CEBB5319D90EC1107D1CD5E0 /* Pods_weather_prodia_weather_prodiaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBD3D74F41AF2D4AB200530 /* Pods_weather_prodia_weather_prodiaUITests.framework */; };
 		F68A5A9E8CAABB317039A28B /* Pods_weather_prodia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DE1DE45BC42CEAE766EA4B /* Pods_weather_prodia.framework */; };
 /* End PBXBuildFile section */
@@ -166,6 +168,8 @@
 		CEB2CA7428446BB4008956A3 /* HomeResp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResp.swift; sourceTree = "<group>"; };
 		CEB2CA762844707F008956A3 /* RestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestHelper.swift; sourceTree = "<group>"; };
 		CEB2CA78284471A3008956A3 /* Service-Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service-Enum.swift"; sourceTree = "<group>"; };
+		CEB2CA7B2848240F008956A3 /* HomeMenuCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCVCell.swift; sourceTree = "<group>"; };
+		CEB2CA7C2848240F008956A3 /* HomeMenuCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuCVCell.xib; sourceTree = "<group>"; };
 		E4DE1DE45BC42CEAE766EA4B /* Pods_weather_prodia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weather_prodia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -713,6 +717,7 @@
 		CE6E74932841D1AD00768450 /* CVCell */ = {
 			isa = PBXGroup;
 			children = (
+				CEB2CA7A284823BF008956A3 /* HomeMenuCVCell */,
 			);
 			path = CVCell;
 			sourceTree = "<group>";
@@ -791,6 +796,15 @@
 				CEB2CA7428446BB4008956A3 /* HomeResp.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CEB2CA7A284823BF008956A3 /* HomeMenuCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEB2CA7B2848240F008956A3 /* HomeMenuCVCell.swift */,
+				CEB2CA7C2848240F008956A3 /* HomeMenuCVCell.xib */,
+			);
+			path = HomeMenuCVCell;
 			sourceTree = "<group>";
 		};
 		D59CECF9ADE8D2DF805F61A4 /* Pods */ = {
@@ -929,6 +943,7 @@
 				CEB2CA6B2843BFD2008956A3 /* Login.storyboard in Resources */,
 				CE6E74892841D11600768450 /* HomeAsset.xcassets in Resources */,
 				CE6E747F2841D00300768450 /* MainInfoView.xib in Resources */,
+				CEB2CA7E2848240F008956A3 /* HomeMenuCVCell.xib in Resources */,
 				CE6E74B8284354D200768450 /* LoadingView.xib in Resources */,
 				CE6E74812841D03900768450 /* InfoAsset.xcassets in Resources */,
 				CE6E74412841ACB800768450 /* LoginAsset.xcassets in Resources */,
@@ -1070,6 +1085,7 @@
 				CE6E73AE28407C9A00768450 /* ViewController.swift in Sources */,
 				CE6E73EE28409E7C00768450 /* UILabelBarlowExtraBold.swift in Sources */,
 				CE6E74982841D1E300768450 /* MainHomeVC.swift in Sources */,
+				CEB2CA7D2848240F008956A3 /* HomeMenuCVCell.swift in Sources */,
 				CE6E73FA28409F3800768450 /* UILabelBarlowThin.swift in Sources */,
 				CE6E73EA28409E3000768450 /* UILabelBarlowBlack.swift in Sources */,
 				CE6E73F428409EDB00768450 /* UILabelBarlowMedium.swift in Sources */,

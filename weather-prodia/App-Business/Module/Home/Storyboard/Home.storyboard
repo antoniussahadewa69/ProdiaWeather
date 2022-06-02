@@ -32,8 +32,8 @@
                                             <constraint firstAttribute="height" constant="44" id="cDx-FJ-DCR"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxk-uv-eZh">
-                                        <rect key="frame" x="8" y="116" width="398" height="650"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxk-uv-eZh">
+                                        <rect key="frame" x="8" y="140" width="398" height="626"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKe-hU-KOl" customClass="UILabelBarlowSemiBold" customModule="weather_prodia" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="24" width="350" height="21"/>
@@ -184,16 +184,43 @@
                                             <constraint firstAttribute="trailing" secondItem="DA1-Ri-77N" secondAttribute="trailing" constant="24" id="yJD-Zh-MsA"/>
                                         </constraints>
                                     </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lXo-Uq-cYP">
+                                        <rect key="frame" x="8" y="140" width="398" height="626"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ozw-Rv-qer">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prodia Weather Information " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isk-Ol-Pvy" customClass="UILabelBarlowSemiBold" customModule="weather_prodia" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="112" width="382" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="K00-Tk-kER"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Jpi-Me-SGu" secondAttribute="trailing" constant="8" id="0aP-pB-ttc"/>
-                                    <constraint firstItem="Cxk-uv-eZh" firstAttribute="top" secondItem="Jpi-Me-SGu" secondAttribute="bottom" constant="8" id="4dP-yd-LPt"/>
+                                    <constraint firstItem="Cxk-uv-eZh" firstAttribute="top" secondItem="Jpi-Me-SGu" secondAttribute="bottom" constant="32" id="4dP-yd-LPt"/>
                                     <constraint firstAttribute="trailing" secondItem="Cxk-uv-eZh" secondAttribute="trailing" constant="8" id="8cd-BN-cNe"/>
                                     <constraint firstItem="rTi-Hv-bMa" firstAttribute="top" secondItem="Cxk-uv-eZh" secondAttribute="bottom" constant="8" id="JNl-XO-1oY"/>
+                                    <constraint firstAttribute="trailing" secondItem="lXo-Uq-cYP" secondAttribute="trailing" constant="8" id="KJp-0s-5OE"/>
                                     <constraint firstItem="Cxk-uv-eZh" firstAttribute="leading" secondItem="p2P-cV-vX1" secondAttribute="leading" constant="8" id="L3q-Qd-9bz"/>
+                                    <constraint firstItem="isk-Ol-Pvy" firstAttribute="leading" secondItem="p2P-cV-vX1" secondAttribute="leading" constant="16" id="Pdh-Su-MEV"/>
                                     <constraint firstItem="Jpi-Me-SGu" firstAttribute="top" secondItem="p2P-cV-vX1" secondAttribute="top" constant="8" id="QxF-s0-psr"/>
                                     <constraint firstItem="Jpi-Me-SGu" firstAttribute="leading" secondItem="p2P-cV-vX1" secondAttribute="leading" constant="8" id="Uf4-7d-CbX"/>
+                                    <constraint firstAttribute="trailing" secondItem="isk-Ol-Pvy" secondAttribute="trailing" constant="16" id="e72-OQ-3Im"/>
+                                    <constraint firstItem="lXo-Uq-cYP" firstAttribute="top" secondItem="Jpi-Me-SGu" secondAttribute="bottom" constant="32" id="kUG-Xd-Ewk"/>
+                                    <constraint firstItem="lXo-Uq-cYP" firstAttribute="leading" secondItem="p2P-cV-vX1" secondAttribute="leading" constant="8" id="nb2-zB-zLl"/>
+                                    <constraint firstItem="isk-Ol-Pvy" firstAttribute="top" secondItem="Jpi-Me-SGu" secondAttribute="bottom" constant="4" id="pGs-Hl-MNc"/>
+                                    <constraint firstItem="rTi-Hv-bMa" firstAttribute="top" secondItem="lXo-Uq-cYP" secondAttribute="bottom" constant="8" symbolic="YES" id="pUB-47-XQ1"/>
                                     <constraint firstItem="rTi-Hv-bMa" firstAttribute="centerX" secondItem="p2P-cV-vX1" secondAttribute="centerX" id="u7V-nM-nFr"/>
                                     <constraint firstAttribute="bottom" secondItem="rTi-Hv-bMa" secondAttribute="bottom" id="wjw-WB-9PM"/>
                                 </constraints>
@@ -209,6 +236,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cvHomeMenu" destination="lXo-Uq-cYP" id="B9K-py-kqM"/>
                         <outlet property="lblValueHumidity" destination="KXM-pN-E4z" id="rVv-kZ-19Z"/>
                         <outlet property="lblValueLat" destination="nKa-rt-Pc2" id="yZl-W6-Yns"/>
                         <outlet property="lblValueLong" destination="PNC-C1-hWk" id="cg8-YI-iDR"/>

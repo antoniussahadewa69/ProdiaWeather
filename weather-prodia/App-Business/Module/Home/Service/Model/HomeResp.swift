@@ -17,7 +17,7 @@ struct DataWeatherResp: Decodable {
 struct CurrentWeather: Decodable {
     var pressure: Int?
     var humidity: Int?
-    var wind_speed: Int?
+    var wind_speed: Double?
 }
 
 struct ApiErrorDto : Decodable {

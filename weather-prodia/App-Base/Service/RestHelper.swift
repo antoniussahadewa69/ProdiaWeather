@@ -25,18 +25,10 @@ class RestHelper{
             .responseDecodable(of: responseType) { dataResponse in
                 switch dataResponse.result {
                 case .failure(let error):
-                    if let dataError = dataResponse.data {
-                        do {
-                            let apiErrorDto = try JSONDecoder().decode(ApiErrorDto.self, from: dataError)
-                            errors(apiErrorDto)
-                        } catch {
-                            errors(ApiErrorDto(status: -1, message: error.localizedDescription))
-                        }
-                    } else {
-                        errors(ApiErrorDto(status: -1, message: error.localizedDescription))
-                    }
+                    print("ini err \(error)")
                     break
                 case .success(let data):
+                    print("ini data ")
                     complete(data)
                     break
             }

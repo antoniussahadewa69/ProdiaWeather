@@ -23,7 +23,7 @@ class HomeService {
     
     func createUrlWeather()-> String {
         let baseUrl : String = "https://api.openweathermap.org/data/2.5/onecall"
-        var url : String = baseUrl + stringLat + "\(latitude)" + stringLong + "\(longitude)" + stringExclude + exclude + stringAppId + apppid
+        let url : String = baseUrl + stringLat + "\(latitude)" + stringLong + "\(longitude)" + stringExclude + exclude + stringAppId + apppid
         return url
     }
     

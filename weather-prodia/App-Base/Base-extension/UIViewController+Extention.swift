@@ -81,14 +81,6 @@ extension UIViewController {
         }
         
     }
-    
-    func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message:
-            message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in
-        }))
-        self.present(alertController, animated: true, completion: nil)
-     }
      
      @objc private func onBlankTapped() { }
      
@@ -154,19 +146,6 @@ extension UIViewController {
         }
     }
     
-    func stateLoading(state: StateLoad) {
-        switch state {
-        case .show:
-            let loadingView = LoadingView()
-            loadingView.setupView()
-            loadingView.roundCorners(value: 15)
-            popUpStateLoading(withView: loadingView)
-        
-        case .dismiss:
-            dismissPopupStateLoading()
-        }
-    }
-    
     func showToast(message : String) {
 
         let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/4, y: self.view.frame.size.height/2, width: (self.view.frame.size.width/4)*2 , height: 50))
@@ -185,49 +164,5 @@ extension UIViewController {
             toastLabel.removeFromSuperview()
         })
         
-    }
-    
-    func popUpStateLoading(withView: UIView) {
-        if !UIViewController.isPresentLoading {
-            UIViewController.isPresentLoading = true
-            
-            let tagPlaceholder = UIViewController.tagContainerLoading
-            let tagSubView = UIViewController.tagSubViewLoading
-            
-            let widthView: CGFloat = 80
-            let heightView: CGFloat = 80
-            
-            let viewContainer = UIView()
-            viewContainer.frame = CGRect(x: 0,y: 0,width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            viewContainer.tag = tagPlaceholder
-            viewContainer.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-            
-            let subView = withView
-            subView.frame = CGRect(x: (self.view.frame.width / 2) - (widthView / 2),
-                                   y: (self.view.frame.height / 2) - (heightView / 2),
-                                   width: widthView, height: heightView)
-            subView.isUserInteractionEnabled = true
-            subView.layer.zPosition = 2
-            subView.tag = tagSubView
-            
-            subView.alpha = 1
-            viewContainer.alpha = 1
-            
-            UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.addSubview(viewContainer)
-            UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.addSubview(subView)
-            
-        } else {}
-        
-    }
-    
-    func dismissPopupStateLoading() {
-        if let viewWithTag = UIApplication.shared.windows.first?.viewWithTag(UIViewController.tagContainerLoading) {
-            viewWithTag.removeFromSuperview()
-        }
-
-        if let subViewWithTag = UIApplication.shared.windows.first?.viewWithTag(UIViewController.tagSubViewLoading) {
-            subViewWithTag.removeFromSuperview()
-        }
-        UIViewController.isPresentLoading = false
     }
 }

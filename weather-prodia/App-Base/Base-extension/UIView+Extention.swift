@@ -55,110 +55,12 @@ extension UIView {
         }
     }
     
-    func setRadiusWithShadow(cornerRadius: CGFloat = 4.0) {
-        layer.cornerRadius = cornerRadius
-        let shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
-        
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-        layer.shadowOpacity = 0.2
-        layer.shadowPath = shadowPath.cgPath
-    }
-    
-    func setRadiusWithOutShadow(cornerRadius: CGFloat = 4.0) {
-        layer.cornerRadius = cornerRadius
-        layer.masksToBounds = false
-    }
-    
-//    salah
-    func createDottedLine(color: CGColor = UIColor(named: "#979797")!.cgColor, position : CGRect = CGRect(x: 0, y: 0, width: 0, height: 0), radius : CGFloat = 0) {
-        let yourViewBorder = CAShapeLayer()
-        var shape = CGRect()
-        if (position.width == 0 && position.height == 0){
-            shape = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
-        } else {
-            shape = position
-        }
-        yourViewBorder.strokeColor = color
-        yourViewBorder.lineDashPattern = [2, 2]
-        yourViewBorder.frame = shape
-        yourViewBorder.fillColor = nil
-        yourViewBorder.lineJoin = CAShapeLayerLineJoin.round
-        yourViewBorder.path = UIBezierPath(roundedRect: shape,cornerRadius: radius).cgPath
-        layer.addSublayer(yourViewBorder)
-    }
-    
-    func addShadow(cornerRadius: CGFloat = 8.0, position: ShadowPosition = .Bottom) {
-        
-        layer.shadowOffset = CGSize(width:0, height:0)
-        layer.cornerRadius = cornerRadius
-        layer.borderColor = UIColor(red: 228.0/255.0, green: 228.0/255.0, blue: 228.0/255.0, alpha: 0.25).cgColor
-        layer.borderWidth = 0.2
-        layer.shadowRadius = 4
-        layer.shadowOpacity = 0.1
-        layer.shadowColor = UIColor.black.cgColor
-        switch position {
-        case .Top:
-            layer.shadowOffset = CGSize(width: 0, height: -4)
-        case .Bottom:
-            layer.shadowOffset = CGSize(width: 0, height: 4)
-        }
-        layer.masksToBounds = false
-    }
-    
-    func addAnotherDefaultShadow(cornerRadius: CGFloat = 4.0) {
-        layer.cornerRadius = cornerRadius
-        layer.shadowOffset = CGSize(width: 0, height: 1)
-        layer.shadowRadius = 3
-        layer.shadowOpacity = 0.5
-        layer.shadowColor = #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1)
-    }
-    
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
           let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
           let mask = CAShapeLayer()
           mask.path = path.cgPath
           layer.mask = mask
       }
-    
-    public func addCellVoucherShadow(cornerRadius: CGFloat = 8.0) {
-        layer.shadowOffset = CGSize(width:0, height:0)
-        layer.cornerRadius = cornerRadius
-        layer.borderColor = UIColor(red: 228.0/255.0, green: 228.0/255.0, blue: 228.0/255.0, alpha: 0.25).cgColor
-        layer.borderWidth = 0.2
-        layer.shadowRadius = 4
-        layer.shadowOpacity = 0.25
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 4)
-        layer.masksToBounds = false
-    }
-    
-    public func addBottomViewShadow(cornerRadius: CGFloat = 8.0) {
-        layer.shadowOffset = CGSize(width:0, height:1100)
-        layer.cornerRadius = cornerRadius
-        layer.borderColor = UIColor(red: 228.0/255.0, green: 228.0/255.0, blue: 228.0/255.0, alpha: 0.25).cgColor
-        layer.borderWidth = 0.2
-        layer.shadowRadius = 4
-        layer.shadowOpacity = 0.1
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: -6)
-        layer.masksToBounds = false
-    }
-    
-    public func addSettingTableViewShadow(cornerRadius: CGFloat = 8.0) {
-           layer.shadowOffset = CGSize(width:2, height:2)
-           layer.cornerRadius = cornerRadius
-           layer.borderColor = UIColor(red: 228.0/255.0, green: 228.0/255.0, blue: 228.0/255.0, alpha: 0.25).cgColor
-           layer.borderWidth = 0.2
-           layer.shadowRadius = 4
-           layer.shadowOpacity = 0.25
-           layer.shadowColor = UIColor.black.cgColor
-           layer.shadowOffset = CGSize(width: 0, height: 4)
-           layer.masksToBounds = false
-    }
-    
-    
 }
 
 //IBDesignableSetup
@@ -178,142 +80,31 @@ extension UIView{
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         return view
     }
-    
-    func roundedTop(){
-        let path = UIBezierPath(roundedRect: self.bounds,
-                                byRoundingCorners: [.topLeft,.topRight],
-                                cornerRadii: CGSize(width: 10, height:  10))
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = path.cgPath
-        self.layer.mask = maskLayer
-    }
-
-    func roundedBottom(){
-        let path = UIBezierPath(roundedRect: self.bounds,
-                                byRoundingCorners: [.bottomLeft,.bottomRight],
-                                cornerRadii: CGSize(width: 10, height:  10))
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = path.cgPath
-        self.layer.mask = maskLayer
-    }
-
-    func roundedTopBottomLeft(){
-        let path = UIBezierPath(roundedRect: self.bounds,
-                                byRoundingCorners: [.topLeft, .bottomLeft],
-                                cornerRadii: CGSize(width: 5, height:  5))
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = path.cgPath
-        self.layer.mask = maskLayer
-    }
-
-    func roundedTopLeft(){
-        let path = UIBezierPath(roundedRect: self.bounds,
-                                 byRoundingCorners: [.topLeft],
-                                 cornerRadii: CGSize(width: self.frame.height/2, height:  self.frame.height/2))
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = path.cgPath
-        self.layer.mask = maskLayer
-    }
-
-    func roundedBottomLeft(){
-        let path = UIBezierPath(roundedRect: self.bounds,
-                                byRoundingCorners: [.bottomLeft],
-                                cornerRadii: CGSize(width: self.frame.height/2, height:  self.frame.height/2))
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = path.cgPath
-        self.layer.mask = maskLayer
-    }
-
-        func setBorder() {
-            self.layer.cornerRadius = 15
-            self.layer.borderWidth = 1
-            self.layer.borderColor = UIColor.lightGray.cgColor
-        }
-    
-        func setRounded() {
-            self.layer.cornerRadius = 10
-        }
-    
-        func setRoundedTwo() {
-            self.layer.cornerRadius = 10
-            self.layer.borderWidth = 1
-            self.layer.borderColor = BaseColor.separatorView?.cgColor
-        }
-    
-    func setRoundedSemi(){
-        self.layer.cornerRadius = 10
-        self.layer.borderWidth = 0.5
-        self.layer.borderColor = UIColor.lightGray.cgColor
-    }
-    
-
-        func roundedTopMessage(isFullScreen : Bool = false){
-            DispatchQueue.main.async {
-                var bound = CGRect()
-                if isFullScreen{
-                    bound = UIScreen.main.bounds
-                }else {
-                    bound = self.bounds
-                }
-                let path = UIBezierPath(roundedRect:  bound,
-                                    byRoundingCorners: [.topRight,.topLeft,.topRight],
-                                    cornerRadii: CGSize(width: 20, height:  20))
-                let maskLayer = CAShapeLayer()
-                maskLayer.path = path.cgPath
-                self.layer.mask = maskLayer
-            }
-        }
-    
-    //MARK: Debt Rounded Cell
-    func notRoundedTopMessage() {
-        DispatchQueue.main.async {
-            var bound = CGRect()
-            bound = self.bounds
-            let path = UIBezierPath(roundedRect:  bound,
-                                byRoundingCorners: [.topRight,.topLeft,.topRight],
-                                cornerRadii: CGSize(width: 0, height:  0))
-            let maskLayer = CAShapeLayer()
-            maskLayer.path = path.cgPath
-            self.layer.mask = maskLayer
-        }
-    }
 }
 
 extension UIViewController {
 
-func showToast(message : String, font: UIFont) {
-
-    let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 100, y: self.view.frame.size.height-150, width: 200, height: 35))
-    toastLabel.backgroundColor = UIColor.black.withAlphaComponent(1)
-    toastLabel.textColor = UIColor.white
-    toastLabel.font = font
-    toastLabel.textAlignment = .center;
-    toastLabel.text = message
-    toastLabel.alpha = 1.0
-    toastLabel.layer.cornerRadius = 10;
-    toastLabel.clipsToBounds  =  true
-//    self.view.addSubview(toastLabel)
-    UIApplication.shared.keyWindow?.addSubview(toastLabel)
-    UIView.animate(withDuration: 3.0, delay: 0.1, options: .curveEaseOut, animations: {
-         toastLabel.alpha = 0.0
-    }, completion: {(isCompleted) in
-        toastLabel.removeFromSuperview()
-    })
-} }
+    func showToast(message : String, font: UIFont) {
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 100, y: self.view.frame.size.height-150, width: 200, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(1)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        UIApplication.shared.keyWindow?.addSubview(toastLabel)
+        UIView.animate(withDuration: 3.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    }
+    
+}
 
 extension UIView {
-    func makeClearHole(rect: CGRect, cornerRadius: CGFloat = 0) {
-        let maskLayer = CAShapeLayer()
-        maskLayer.fillRule = CAShapeLayerFillRule.evenOdd
-        maskLayer.fillColor = BaseColor.Properties.baseColor?.cgColor
-        
-        let pathToOverlay = UIBezierPath(rect: self.bounds)
-        pathToOverlay.append(UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius))
-        pathToOverlay.usesEvenOddFillRule = true
-        maskLayer.path = pathToOverlay.cgPath
-        
-        layer.mask = maskLayer
-    }
     
     public func roundCorners(_ corners: UIRectCorner = .allCorners, value: CGFloat) {
         guard corners != .allCorners else {
