@@ -25,10 +25,9 @@ class RestHelper{
             .responseDecodable(of: responseType) { dataResponse in
                 switch dataResponse.result {
                 case .failure(let error):
-                    print("ini err \(error)")
+                    errors(ApiErrorDto(status: error.responseCode, message: error.failureReason))
                     break
                 case .success(let data):
-                    print("ini data ")
                     complete(data)
                     break
             }

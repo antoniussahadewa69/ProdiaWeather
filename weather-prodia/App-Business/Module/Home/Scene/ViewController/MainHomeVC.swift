@@ -17,15 +17,15 @@ class MainHomeVC: UIViewController {
     @IBOutlet weak var lblValueHumidity: UILabelBarlowRegular!
     @IBOutlet weak var lblValueWindSpeed: UILabelBarlowRegular!
     @IBOutlet weak var cvHomeMenu: UICollectionView!
+    @IBOutlet weak var viewHomeMenu: UIView!
     @IBOutlet weak var btnLogout: UIButton!
-    
-    
     
     struct VCProperty {
         static let storyboard : String = "Home"
         static let identifier : String = "mainHomeVCIdentifier"
         static let errMsg : String = "Internal Server Err"
         static let zeroInt : Int = 0
+        static let err : String = "Err--"
     }
     
     var router : HomeRouter?
@@ -97,6 +97,9 @@ extension MainHomeVC : MainHomeVMProtocol {
     
     func didSuccesHomeGetData(rep: DataWeatherResp) {
         DispatchQueue.main.async {
+            self.cvHomeMenu.isHidden = false
+            self.viewHomeMenu.isHidden = true
+            
             self.lblValueLat.text = "\(self.vm.dataLat)"
             self.lblValueLong.text = "\(self.vm.dataLong)"
             self.lblValuePressure.text = "\(self.vm.dataPressure)"
@@ -110,6 +113,22 @@ extension MainHomeVC : MainHomeVMProtocol {
     func didErrHomeGetData() {
         DispatchQueue.main.async {
             self.showToast(message: VCProperty.errMsg)
+            self.cvHomeMenu.isHidden = true
+            self.viewHomeMenu.isHidden = false
+            
+            self.lblValueLat.textColor = .red
+            self.lblValueLong.textColor = .red
+            self.lblValuePressure.textColor = .red
+            self.lblValueTimezone.textColor = .red
+            self.lblValueHumidity.textColor = .red
+            self.lblValueWindSpeed.textColor = .red
+            
+            self.lblValueLat.text = VCProperty.err
+            self.lblValueLong.text = VCProperty.err
+            self.lblValuePressure.text = VCProperty.err
+            self.lblValueTimezone.text = VCProperty.err
+            self.lblValueHumidity.text = VCProperty.err
+            self.lblValueWindSpeed.text = VCProperty.err
         }
     }
 }

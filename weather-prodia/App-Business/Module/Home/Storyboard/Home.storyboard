@@ -255,6 +255,7 @@
                         <outlet property="lblValuePressure" destination="a5k-5k-dil" id="5EM-XJ-2dc"/>
                         <outlet property="lblValueTimezone" destination="1bK-2G-LFe" id="lgb-IG-OZt"/>
                         <outlet property="lblValueWindSpeed" destination="9g0-oA-cYW" id="bAr-9y-Y0e"/>
+                        <outlet property="viewHomeMenu" destination="Cxk-uv-eZh" id="YKB-IK-yf9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
