@@ -20,6 +20,7 @@ class LoginRouter {
         guard let vc = UIStoryboard(name:MainHomeVC.VCProperty.storyboard, bundle:nil).instantiateViewController(withIdentifier: MainHomeVC.VCProperty.identifier) as? MainHomeVC else {
             return
         }
-        self.vc?.navigationController?.pushViewController(vc, animated:true)
+        guard let window = UIApplication.shared.keyWindow else { return }
+        window.rootViewController = vc
     }
 }

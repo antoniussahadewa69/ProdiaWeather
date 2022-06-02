@@ -31,8 +31,6 @@ class MainHomeVC: UIViewController {
     var router : HomeRouter?
     var vm = MainHomeVM()
     
-    var flagRouterHome : Int = VCProperty.zeroInt
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         self.navigationItem.setHidesBackButton(true, animated: true)
@@ -67,13 +65,8 @@ class MainHomeVC: UIViewController {
 extension MainHomeVC {
     
     @objc func btnLogoutClick(button: UIButton) {
-        if flagRouterHome == 0 {
-            print("ini logout")
-            Prefs.removeSession()
-            AppRouter.switchToLoginPin(completion: nil)
-            flagRouterHome = 1
-            return
-        }
+        Prefs.removeSession()
+        AppRouter.switchToLoginPin(completion: nil)
     }
     
     func setupCollectionView(){

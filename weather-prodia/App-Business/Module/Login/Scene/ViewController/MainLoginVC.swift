@@ -28,7 +28,6 @@ class MainLoginVC: UIViewController, UITextFieldDelegate {
     
     var router : LoginRouter?
     var vm = MainLoginVM()
-    var flagRouterHome : Int = 0
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -69,10 +68,7 @@ class MainLoginVC: UIViewController, UITextFieldDelegate {
     }
     
     @objc func btnClick(button: UIButton) {
-        if flagRouterHome == 0 {
-            self.vm.validateDataLogin(dataUser: tfUsrInput.text ?? "", dataPin: tfPinInput.text ?? "")
-            flagRouterHome = 1
-        }
+        self.vm.validateDataLogin(dataUser: tfUsrInput.text ?? "", dataPin: tfPinInput.text ?? "")
     }
     
     @objc func textFieldDidChangeUser(textField: UITextField) {
