@@ -204,10 +204,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCY-Hz-g50">
+                                        <rect key="frame" x="326" y="8" width="80" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="H44-ke-UTW"/>
+                                            <constraint firstAttribute="width" constant="80" id="NLp-Dz-GCr"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Logout"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Jpi-Me-SGu" secondAttribute="trailing" constant="8" id="0aP-pB-ttc"/>
+                                    <constraint firstAttribute="trailing" secondItem="zCY-Hz-g50" secondAttribute="trailing" constant="8" id="3it-hF-yKH"/>
                                     <constraint firstItem="Cxk-uv-eZh" firstAttribute="top" secondItem="Jpi-Me-SGu" secondAttribute="bottom" constant="32" id="4dP-yd-LPt"/>
                                     <constraint firstAttribute="trailing" secondItem="Cxk-uv-eZh" secondAttribute="trailing" constant="8" id="8cd-BN-cNe"/>
                                     <constraint firstItem="rTi-Hv-bMa" firstAttribute="top" secondItem="Cxk-uv-eZh" secondAttribute="bottom" constant="8" id="JNl-XO-1oY"/>
@@ -218,6 +228,7 @@
                                     <constraint firstItem="Jpi-Me-SGu" firstAttribute="leading" secondItem="p2P-cV-vX1" secondAttribute="leading" constant="8" id="Uf4-7d-CbX"/>
                                     <constraint firstAttribute="trailing" secondItem="isk-Ol-Pvy" secondAttribute="trailing" constant="16" id="e72-OQ-3Im"/>
                                     <constraint firstItem="lXo-Uq-cYP" firstAttribute="top" secondItem="Jpi-Me-SGu" secondAttribute="bottom" constant="32" id="kUG-Xd-Ewk"/>
+                                    <constraint firstItem="zCY-Hz-g50" firstAttribute="top" secondItem="p2P-cV-vX1" secondAttribute="top" constant="8" id="md6-e3-yNx"/>
                                     <constraint firstItem="lXo-Uq-cYP" firstAttribute="leading" secondItem="p2P-cV-vX1" secondAttribute="leading" constant="8" id="nb2-zB-zLl"/>
                                     <constraint firstItem="isk-Ol-Pvy" firstAttribute="top" secondItem="Jpi-Me-SGu" secondAttribute="bottom" constant="4" id="pGs-Hl-MNc"/>
                                     <constraint firstItem="rTi-Hv-bMa" firstAttribute="top" secondItem="lXo-Uq-cYP" secondAttribute="bottom" constant="8" symbolic="YES" id="pUB-47-XQ1"/>
@@ -236,6 +247,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnLogout" destination="zCY-Hz-g50" id="LX7-TZ-PjB"/>
                         <outlet property="cvHomeMenu" destination="lXo-Uq-cYP" id="B9K-py-kqM"/>
                         <outlet property="lblValueHumidity" destination="KXM-pN-E4z" id="rVv-kZ-19Z"/>
                         <outlet property="lblValueLat" destination="nKa-rt-Pc2" id="yZl-W6-Yns"/>

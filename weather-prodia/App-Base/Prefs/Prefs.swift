@@ -26,8 +26,4 @@ struct Prefs {
     static func removeSession() {
         UserDefaults.standard.removeObject(forKey: "user")
     }
-    
-    static func removeAll(){
-        removeSession()
-    }
 }

@@ -17,15 +17,21 @@ class MainHomeVC: UIViewController {
     @IBOutlet weak var lblValueHumidity: UILabelBarlowRegular!
     @IBOutlet weak var lblValueWindSpeed: UILabelBarlowRegular!
     @IBOutlet weak var cvHomeMenu: UICollectionView!
+    @IBOutlet weak var btnLogout: UIButton!
+    
+    
     
     struct VCProperty {
         static let storyboard : String = "Home"
         static let identifier : String = "mainHomeVCIdentifier"
         static let errMsg : String = "Internal Server Err"
+        static let zeroInt : Int = 0
     }
     
     var router : HomeRouter?
     var vm = MainHomeVM()
+    
+    var flagRouterHome : Int = VCProperty.zeroInt
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -50,7 +56,7 @@ class MainHomeVC: UIViewController {
     }
     
     func setupAction(){
-        
+        self.btnLogout.addTarget(self, action: #selector(btnLogoutClick(button:)), for: .touchUpInside)
     }
     
     func setupView(){
@@ -59,6 +65,16 @@ class MainHomeVC: UIViewController {
 }
 
 extension MainHomeVC {
+    
+    @objc func btnLogoutClick(button: UIButton) {
+        if flagRouterHome == 0 {
+            print("ini logout")
+            Prefs.removeSession()
+            AppRouter.switchToLoginPin(completion: nil)
+            flagRouterHome = 1
+            return
+        }
+    }
     
     func setupCollectionView(){
         self.setupCollectionViewCell()

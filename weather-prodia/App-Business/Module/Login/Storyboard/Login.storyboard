@@ -106,10 +106,10 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1k-R1-Nkn">
-                                        <rect key="frame" x="107" y="406" width="200" height="30"/>
+                                        <rect key="frame" x="107" y="406" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="IRI-ic-tDc"/>
-                                            <constraint firstAttribute="height" constant="30" id="LKB-Xi-E7i"/>
+                                            <constraint firstAttribute="height" constant="40" id="LKB-Xi-E7i"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login">
@@ -119,7 +119,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_home_poweredby" translatesAutoresizingMaskIntoConstraints="NO" id="0Sh-qe-5wj">
-                                        <rect key="frame" x="78.5" y="486" width="257" height="32"/>
+                                        <rect key="frame" x="78.5" y="496" width="257" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="257" id="rUX-51-DGe"/>
                                             <constraint firstAttribute="height" constant="32" id="tQc-dZ-Swp"/>
