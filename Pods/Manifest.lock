@@ -38,20 +38,16 @@ PODS:
   - "GoogleUtilities/NSData+zlib (7.7.0)"
   - GoogleUtilities/UserDefaults (7.7.0):
     - GoogleUtilities/Logger
-  - lottie-ios (3.3.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.1.0)
-  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire
   - Firebase/RemoteConfig
-  - lottie-ios
-  - SVProgressHUD
 
 SPEC REPOS:
   trunk:
@@ -64,10 +60,8 @@ SPEC REPOS:
     - FirebaseRemoteConfig
     - GoogleDataTransport
     - GoogleUtilities
-    - lottie-ios
     - nanopb
     - PromisesObjC
-    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
@@ -79,11 +73,9 @@ SPEC CHECKSUMS:
   FirebaseRemoteConfig: 2d6e2cfdb49af79535c8af8a80a4a5009038ec2b
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
-  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: e3c345fb89eb8a7b993ccd6a6d706facab07ccc4
+PODFILE CHECKSUM: 55b6b5fbd7f5b78da8917ed8b21305fa488ff057
 
 COCOAPODS: 1.11.2

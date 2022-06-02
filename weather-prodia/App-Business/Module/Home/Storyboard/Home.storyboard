@@ -296,6 +296,9 @@
         <designable name="fGw-Yq-mH1">
             <size key="intrinsicContentSize" width="68.5" height="20.5"/>
         </designable>
+        <designable name="isk-Ol-Pvy">
+            <size key="intrinsicContentSize" width="212.5" height="20.5"/>
+        </designable>
         <designable name="nKa-rt-Pc2">
             <size key="intrinsicContentSize" width="8" height="20.5"/>
         </designable>

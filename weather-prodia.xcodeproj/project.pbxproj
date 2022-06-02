@@ -53,16 +53,9 @@
 		CE6E748D2841D14900768450 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E748C2841D14900768450 /* HomeService.swift */; };
 		CE6E74962841D1D700768450 /* MainHomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E74952841D1D700768450 /* MainHomeVM.swift */; };
 		CE6E74982841D1E300768450 /* MainHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E74972841D1E300768450 /* MainHomeVC.swift */; };
-		CE6E749B2841D92A00768450 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E749A2841D92A00768450 /* UIViewController+Extention.swift */; };
-		CE6E749D28423E6300768450 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E749C28423E6300768450 /* ButtonView.swift */; };
-		CE6E749F28424B9300768450 /* ButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6E749E28424B9300768450 /* ButtonView.xib */; };
 		CE6E74A22842D37300768450 /* Base-Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E74A12842D37300768450 /* Base-Router.swift */; };
 		CE6E74A52842DF4000768450 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E74A42842DF4000768450 /* Prefs.swift */; };
 		CE6E74B3284341E100768450 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E74B2284341E100768450 /* UIView+Extention.swift */; };
-		CE6E74B6284354C100768450 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E74B5284354C100768450 /* LoadingView.swift */; };
-		CE6E74B8284354D200768450 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6E74B7284354D200768450 /* LoadingView.xib */; };
-		CE6E74BB2843563C00768450 /* LottieAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6E74BA2843563C00768450 /* LottieAnimationView.xib */; };
-		CE6E74BD2843570B00768450 /* LottieAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E74BC2843570B00768450 /* LottieAnimationView.swift */; };
 		CEB2CA6B2843BFD2008956A3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2CA6A2843BFD2008956A3 /* Login.storyboard */; };
 		CEB2CA6E2843C080008956A3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2CA6D2843C080008956A3 /* Home.storyboard */; };
 		CEB2CA7028444778008956A3 /* LoginModelReq.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2CA6F28444778008956A3 /* LoginModelReq.swift */; };
@@ -72,6 +65,7 @@
 		CEB2CA79284471A3008956A3 /* Service-Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2CA78284471A3008956A3 /* Service-Enum.swift */; };
 		CEB2CA7D2848240F008956A3 /* HomeMenuCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2CA7B2848240F008956A3 /* HomeMenuCVCell.swift */; };
 		CEB2CA7E2848240F008956A3 /* HomeMenuCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB2CA7C2848240F008956A3 /* HomeMenuCVCell.xib */; };
+		CEB2CA802848B49C008956A3 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2CA7F2848B49C008956A3 /* UIViewController+Extention.swift */; };
 		CEBB5319D90EC1107D1CD5E0 /* Pods_weather_prodia_weather_prodiaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FBD3D74F41AF2D4AB200530 /* Pods_weather_prodia_weather_prodiaUITests.framework */; };
 		F68A5A9E8CAABB317039A28B /* Pods_weather_prodia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DE1DE45BC42CEAE766EA4B /* Pods_weather_prodia.framework */; };
 /* End PBXBuildFile section */
@@ -151,16 +145,9 @@
 		CE6E748C2841D14900768450 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		CE6E74952841D1D700768450 /* MainHomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeVM.swift; sourceTree = "<group>"; };
 		CE6E74972841D1E300768450 /* MainHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeVC.swift; sourceTree = "<group>"; };
-		CE6E749A2841D92A00768450 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
-		CE6E749C28423E6300768450 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		CE6E749E28424B9300768450 /* ButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonView.xib; sourceTree = "<group>"; };
 		CE6E74A12842D37300768450 /* Base-Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Base-Router.swift"; sourceTree = "<group>"; };
 		CE6E74A42842DF4000768450 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		CE6E74B2284341E100768450 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
-		CE6E74B5284354C100768450 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		CE6E74B7284354D200768450 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		CE6E74BA2843563C00768450 /* LottieAnimationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LottieAnimationView.xib; sourceTree = "<group>"; };
-		CE6E74BC2843570B00768450 /* LottieAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationView.swift; sourceTree = "<group>"; };
 		CEB2CA6A2843BFD2008956A3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		CEB2CA6D2843C080008956A3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CEB2CA6F28444778008956A3 /* LoginModelReq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelReq.swift; sourceTree = "<group>"; };
@@ -170,6 +157,7 @@
 		CEB2CA78284471A3008956A3 /* Service-Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service-Enum.swift"; sourceTree = "<group>"; };
 		CEB2CA7B2848240F008956A3 /* HomeMenuCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCVCell.swift; sourceTree = "<group>"; };
 		CEB2CA7C2848240F008956A3 /* HomeMenuCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuCVCell.xib; sourceTree = "<group>"; };
+		CEB2CA7F2848B49C008956A3 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		E4DE1DE45BC42CEAE766EA4B /* Pods_weather_prodia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weather_prodia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -283,7 +271,6 @@
 		CE6E73DB284086A200768450 /* App-Business */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E73FB28409F6200768450 /* Reuseable Components */,
 				CE6E73DD284086E900768450 /* Module */,
 			);
 			path = "App-Business";
@@ -371,41 +358,6 @@
 				CE6E73F928409F3800768450 /* UILabelBarlowThin.swift */,
 			);
 			path = Barlow;
-			sourceTree = "<group>";
-		};
-		CE6E73FB28409F6200768450 /* Reuseable Components */ = {
-			isa = PBXGroup;
-			children = (
-				CE6E73FD28409F8200768450 /* TVCell */,
-				CE6E73FC28409F7300768450 /* UIView */,
-			);
-			path = "Reuseable Components";
-			sourceTree = "<group>";
-		};
-		CE6E73FC28409F7300768450 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				CE6E74B92843562C00768450 /* LottieAnimationView */,
-				CE6E74B42843549900768450 /* LoadingView */,
-				CE6E73FE28409F9B00768450 /* ButtonView */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		CE6E73FD28409F8200768450 /* TVCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TVCell;
-			sourceTree = "<group>";
-		};
-		CE6E73FE28409F9B00768450 /* ButtonView */ = {
-			isa = PBXGroup;
-			children = (
-				CE6E749C28423E6300768450 /* ButtonView.swift */,
-				CE6E749E28424B9300768450 /* ButtonView.xib */,
-			);
-			path = ButtonView;
 			sourceTree = "<group>";
 		};
 		CE6E73FF28409FC100768450 /* Login */ = {
@@ -725,8 +677,8 @@
 		CE6E74992841D8D400768450 /* Base-extension */ = {
 			isa = PBXGroup;
 			children = (
-				CE6E749A2841D92A00768450 /* UIViewController+Extention.swift */,
 				CE6E74B2284341E100768450 /* UIView+Extention.swift */,
+				CEB2CA7F2848B49C008956A3 /* UIViewController+Extention.swift */,
 			);
 			path = "Base-extension";
 			sourceTree = "<group>";
@@ -754,24 +706,6 @@
 				CEB2CA78284471A3008956A3 /* Service-Enum.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		CE6E74B42843549900768450 /* LoadingView */ = {
-			isa = PBXGroup;
-			children = (
-				CE6E74B5284354C100768450 /* LoadingView.swift */,
-				CE6E74B7284354D200768450 /* LoadingView.xib */,
-			);
-			path = LoadingView;
-			sourceTree = "<group>";
-		};
-		CE6E74B92843562C00768450 /* LottieAnimationView */ = {
-			isa = PBXGroup;
-			children = (
-				CE6E74BA2843563C00768450 /* LottieAnimationView.xib */,
-				CE6E74BC2843570B00768450 /* LottieAnimationView.swift */,
-			);
-			path = LottieAnimationView;
 			sourceTree = "<group>";
 		};
 		CEB2CA692843BFB4008956A3 /* Storyboard */ = {
@@ -934,9 +868,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6E74582841CBA400768450 /* WeaterAsset.xcassets in Resources */,
-				CE6E749F28424B9300768450 /* ButtonView.xib in Resources */,
 				CE6E74612841CCC600768450 /* MainWeatherView.xib in Resources */,
-				CE6E74BB2843563C00768450 /* LottieAnimationView.xib in Resources */,
 				CE6E73B628407C9E00768450 /* LaunchScreen.storyboard in Resources */,
 				CEB2CA6E2843C080008956A3 /* Home.storyboard in Resources */,
 				CE6E73B328407C9E00768450 /* Assets.xcassets in Resources */,
@@ -944,7 +876,6 @@
 				CE6E74892841D11600768450 /* HomeAsset.xcassets in Resources */,
 				CE6E747F2841D00300768450 /* MainInfoView.xib in Resources */,
 				CEB2CA7E2848240F008956A3 /* HomeMenuCVCell.xib in Resources */,
-				CE6E74B8284354D200768450 /* LoadingView.xib in Resources */,
 				CE6E74812841D03900768450 /* InfoAsset.xcassets in Resources */,
 				CE6E74412841ACB800768450 /* LoginAsset.xcassets in Resources */,
 				CE6E73B128407C9A00768450 /* Main.storyboard in Resources */,
@@ -1086,13 +1017,13 @@
 				CE6E73EE28409E7C00768450 /* UILabelBarlowExtraBold.swift in Sources */,
 				CE6E74982841D1E300768450 /* MainHomeVC.swift in Sources */,
 				CEB2CA7D2848240F008956A3 /* HomeMenuCVCell.swift in Sources */,
+				CEB2CA802848B49C008956A3 /* UIViewController+Extention.swift in Sources */,
 				CE6E73FA28409F3800768450 /* UILabelBarlowThin.swift in Sources */,
 				CE6E73EA28409E3000768450 /* UILabelBarlowBlack.swift in Sources */,
 				CE6E73F428409EDB00768450 /* UILabelBarlowMedium.swift in Sources */,
 				CE6E73E428409D3200768450 /* BaseColor.swift in Sources */,
 				CE6E74512841AE6E00768450 /* MainLoginVC.swift in Sources */,
 				CE6E74792841CF4D00768450 /* MainInfoVC.swift in Sources */,
-				CE6E74BD2843570B00768450 /* LottieAnimationView.swift in Sources */,
 				CEB2CA772844707F008956A3 /* RestHelper.swift in Sources */,
 				CE6E73AA28407C9A00768450 /* AppDelegate.swift in Sources */,
 				CE6E74772841CF3D00768450 /* MainInfoVM.swift in Sources */,
@@ -1102,9 +1033,7 @@
 				CE6E73F628409EF600768450 /* UILabelBarlowRegular.swift in Sources */,
 				CE6E74692841CD7400768450 /* MainWeatherVM.swift in Sources */,
 				CE6E743D2841AA3600768450 /* LoginDataRCF.swift in Sources */,
-				CE6E749B2841D92A00768450 /* UIViewController+Extention.swift in Sources */,
 				CE6E748B2841D13300768450 /* HomeRouter.swift in Sources */,
-				CE6E74B6284354C100768450 /* LoadingView.swift in Sources */,
 				CE6E74472841AD7100768450 /* LoginService.swift in Sources */,
 				CEB2CA79284471A3008956A3 /* Service-Enum.swift in Sources */,
 				CE6E74B3284341E100768450 /* UIView+Extention.swift in Sources */,
@@ -1112,7 +1041,6 @@
 				CE6E747B2841CFC100768450 /* InfoRouter.swift in Sources */,
 				CE6E74532841AE9200768450 /* MainLoginVM.swift in Sources */,
 				CE6E748D2841D14900768450 /* HomeService.swift in Sources */,
-				CE6E749D28423E6300768450 /* ButtonView.swift in Sources */,
 				CE6E744D2841AE1B00768450 /* LoginRouter.swift in Sources */,
 				CE6E73AC28407C9A00768450 /* SceneDelegate.swift in Sources */,
 				CEB2CA7028444778008956A3 /* LoginModelReq.swift in Sources */,

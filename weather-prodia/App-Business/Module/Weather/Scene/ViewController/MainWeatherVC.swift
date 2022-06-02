@@ -18,7 +18,6 @@ class MainWeatherVC: UIViewController {
     var vm = MainWeatherVM()
     
     override func viewWillAppear(_ animated: Bool) {
-        //.setTextNavigation(theme: .normal, title: VCProperty.navigationTitle, navigator: .back, navigatorCallback: nil)
     }
     
     override func viewDidLoad() {
